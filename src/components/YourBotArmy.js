@@ -1,7 +1,8 @@
 import React from "react";
 
-function YourBotArmy() {
+function YourBotArmy({botArmyItem }) {
   //your bot army code here...
+  
 
   return (
     <div className="ui segment inverted olive bot-army">
