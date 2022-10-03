@@ -1,6 +1,10 @@
 import React from "react";
+import BotCard from "./BotCard";
 
-function YourBotArmy({botArmyItem }) {
+function YourBotArmy({botArmyItem, setActive}) {
+  const armyBot = () =>{
+    return <BotCard  botArmyItem = {botArmyItem} setActive = {setActive}/>
+  }
   //your bot army code here...
   
 
@@ -9,7 +13,7 @@ function YourBotArmy({botArmyItem }) {
       <div className="ui five column grid">
         <div className="row bot-army-row">
           {/*...and here...*/}
-          Your Bot Army
+          {armyBot}
         </div>
       </div>
     </div>
