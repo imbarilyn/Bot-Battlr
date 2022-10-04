@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/-Bot-Battlr/static/css/main.0a0f06b5.chunk.css",
+    "main.js": "/-Bot-Battlr/static/js/main.4151b4f6.chunk.js",
+    "main.js.map": "/-Bot-Battlr/static/js/main.4151b4f6.chunk.js.map",
+    "runtime-main.js": "/-Bot-Battlr/static/js/runtime-main.6be9f5fb.js",
+    "runtime-main.js.map": "/-Bot-Battlr/static/js/runtime-main.6be9f5fb.js.map",
+    "static/js/2.aea082ff.chunk.js": "/-Bot-Battlr/static/js/2.aea082ff.chunk.js",
+    "static/js/2.aea082ff.chunk.js.map": "/-Bot-Battlr/static/js/2.aea082ff.chunk.js.map",
+    "index.html": "/-Bot-Battlr/index.html",
+    "static/css/main.0a0f06b5.chunk.css.map": "/-Bot-Battlr/static/css/main.0a0f06b5.chunk.css.map",
+    "static/js/2.aea082ff.chunk.js.LICENSE.txt": "/-Bot-Battlr/static/js/2.aea082ff.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6be9f5fb.js",
+    "static/js/2.aea082ff.chunk.js",
+    "static/css/main.0a0f06b5.chunk.css",
+    "static/js/main.4151b4f6.chunk.js"
+  ]
+}
