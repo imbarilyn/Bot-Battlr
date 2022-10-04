@@ -1,30 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
+import BotSpecs from "./BotSpecs";
 
 function BotsPage() {
   //start here with your code for step one
-  const [activeBot, setActive] = useState(false)
- const [botArmy, setBotArmy] = useState([]);
-  const [botCol , setBotCol] = useState([]);
-  useEffect(() => {
-    fetch(`http://localhost:8002/bots`)
-    .then(resp => resp.json())
-    .then(bots => setBotCol(bots))
-    
-  }, [])
- // console.log(botCol);
+  const [botCol, setBotCol] = useState([]);
+  const [botArmy, setBotArmy] = useState([]);
+  const [isActive, setIsActive] = useState(false);
 
- function botArmyItem (army){
-  const clickedArmy = [...army];
-  setBotArmy(clickedArmy)
- }
+  useEffect(() => {
+    fetch("http://localhost:8002/bots")
+      .then((res) => res.json())
+      .then((data) => setBotCol(data));
+  }, []);
+  // console.log(botCol)
   return (
     <div>
-      <YourBotArmy botArmyItem ={botArmyItem}  setActive ={setActive} activeBot = {activeBot}/>
-      <BotCollection  botCol = {botCol}/>
+      <YourBotArmy botArmy={botArmy} setBotArmy={setBotArmy} setBotCol={setBotCol} />
+      {isActive ? (<BotSpecs bot={isActive} setIsActive={setIsActive} setBotArmy={setBotArmy}/>
+      ) : (
+        <BotCollection setBotArmy={setBotArmy} bots={botCol} botArmy={botArmy}setBotCol={setBotCol} setIsActive={setIsActive} />
+      )}
     </div>
-  )
+  );
 }
 
 export default BotsPage;
