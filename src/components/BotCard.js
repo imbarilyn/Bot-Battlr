@@ -9,15 +9,14 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function BotCard({ bot, botArmy, setBotArmy, setBotCol, setIsActive }) {
+function BotCard({ bot, botArmy, setBotArmy, setIsActive }) {
  
   function handleClick() {
     if (botArmy.find((botArm) => botArm.id === bot.id)) {
       setBotArmy((army) => army.filter((botArm) => botArm.id !== bot.id));
-    } else {
+    } 
+    else {
       setIsActive(bot)
-      
-
     }
   }
 
@@ -34,7 +33,7 @@ function BotCard({ bot, botArmy, setBotArmy, setBotCol, setIsActive }) {
           </div>
           <div className="meta text-wrap">
             <small>{bot.catchphrase}</small>
-          </div>
+          </div>                                                                                                                                                                                            
         </div>
         <div className="extra content">
           <span>
