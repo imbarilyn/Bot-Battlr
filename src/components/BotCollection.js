@@ -1,9 +1,9 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function BotCollection({ bots, botArmy, setBotArmy, setBotCol, setIsActive }) {
+function BotCollection({ botCol, botArmy, setBotArmy, setBotCol, setIsActive }) {
   // Your code here
-  const col = bots.map((bot) => {
+  const col = botCol.map((bot) => {
    return  <BotCard key={bot.id} bot={bot} botArmy={botArmy} setBotArmy={setBotArmy} setBotCol={setBotCol} setIsActive={setIsActive}/>}
   )
   return (

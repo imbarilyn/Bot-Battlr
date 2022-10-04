@@ -18,9 +18,9 @@ function BotsPage() {
   return (
     <div>
       <YourBotArmy botArmy={botArmy} setBotArmy={setBotArmy} setBotCol={setBotCol} />
-      {isActive ? (<BotSpecs bot={isActive} setIsActive={setIsActive} setBotArmy={setBotArmy}/>
-      ) : (
-        <BotCollection setBotArmy={setBotArmy} bots={botCol} botArmy={botArmy}setBotCol={setBotCol} setIsActive={setIsActive} />
+      {isActive ? (<BotSpecs bot={isActive} setIsActive={setIsActive} setBotArmy={setBotArmy}/>): 
+      (
+        <BotCollection setBotArmy={setBotArmy} botCol={botCol} botArmy={botArmy}setBotCol={setBotCol} setIsActive={setIsActive} />
       )}
     </div>
   );

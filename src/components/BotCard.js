@@ -10,21 +10,7 @@ const botTypeClasses = {
 };
 
 function BotCard({ bot, botArmy, setBotArmy, setBotCol, setIsActive }) {
-  function handleDelete() {
-    fetch(`http://localhost:8002/bots/${bot.id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then((res) => res.json())
-      .then(() => {
-        setBotCol(botItem => botItem.filter((botArm) => botArm.id !== bot.id))
-
-      }
-      );
-  }
-
+ 
   function handleClick() {
     if (botArmy.find((botArm) => botArm.id === bot.id)) {
       setBotArmy((army) => army.filter((botArm) => botArm.id !== bot.id));
