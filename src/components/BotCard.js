@@ -66,7 +66,7 @@ function BotCard({ bot, botArmy, setBotArmy, setBotCol, setIsActive }) {
           </span>
           <span>
             <div className="ui center aligned segment basic">
-              <button className="ui mini red button" onClick={handleDelete}>
+              <button className="ui mini red button">
                 x
               </button>
             </div>
